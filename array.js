@@ -1,4 +1,8 @@
-
+/*
+ * Author:Md Sholayman
+ * Date:6 August,2023
+ * Des: In this file we have practice different kind of array related problems.
+ */
 
 
 //simple array declare
@@ -29,4 +33,15 @@ const Bangladesh =[Dhaka,Rangpur,Ctg] ; //This is a multiDimensionalArray
 
  //Now if we want to select Feni by Index
  
- console.log(Bangladesh[2][2])
+//  console.log(Bangladesh[2][2])  //output: Feni
+
+
+//Destructuring an array
+
+const Cities = ["Dhaka" , "Kolkata" , "Rajshahi" , "London"]
+
+const [a,b,c,d] = Cities ;
+
+// console.log(b) //output: Kolkata
+// console.log(d) //output: London
+// console.log(a) //output: Dhaka
