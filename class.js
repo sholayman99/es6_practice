@@ -68,3 +68,55 @@ class aClass{
 let obj1 = new aClass(10,20) //sending params to constructor
 
 obj1.add()
+
+
+//===>::static keyword
+//by using this keyword we have direct access from the class.we didn't to create a obj to get element from Class.
+
+
+class staticClass{
+   static myFunc(){
+        console.log("Hello from static function.")
+    }
+}
+
+staticClass.myFunc() //output:: Hello from static function.
+
+//In this example we can see that we didn't create any object and getting access directly from class.
+
+
+//===>::Class Inheritance
+/*
+===>Note:: Class inheritance is a relation between parent class and child class.
+*/
+
+class parentClass{
+   parentFunc(name){
+     console.log(`Hello from ${name} function.`);
+   }
+
+   //example of override
+
+   parentFunc2(){
+    console.log("I am parentFunc2");
+   }
+
+}
+
+class childClass extends parentClass{
+    parentFunc2(){
+        console.log("I am parentFunc2 but I am getting override");
+       }
+}
+
+let childObj = new childClass();
+childObj.parentFunc("parent"); //output::Hello from parent function.
+
+//output of override class methods.
+
+childObj.parentFunc2(); //output::I am parentFunc2 but I am getting override.
+
+
+//In this example we can see that a function which has been created inside parent Class is getting access 
+//by object of child Class.This is called class Inheritance.Child class can also modify an element of parent class
+//Which we have seen in parentFunc2.That is called override.
