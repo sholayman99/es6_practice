@@ -101,16 +101,32 @@ class parentClass{
     console.log("I am parentFunc2");
    }
 
+   hello1(){
+    console.log("Function1 for super keyword");
+   }
+   hello2(){
+    console.log("Function2 for super keyword");
+   }
+
 }
 
 class childClass extends parentClass{
     parentFunc2(){
         console.log("I am parentFunc2 but I am getting override");
        }
+
+    //demo for super keyword.We only use it at the time of inheritance.By this we can call function of
+    //parent class from child class
+    
+    superKeyDemo(){
+       super.hello1() //output::Function1 for super keyword
+       super.hello2() //output:: Function2 for super keyword
+    }
 }
 
 let childObj = new childClass();
 childObj.parentFunc("parent"); //output::Hello from parent function.
+childObj.superKeyDemo()
 
 //output of override class methods.
 
